@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Comic sans';
+    src: url(./Comic\ Sans\ MS.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    font-family: 'Comic sans';
+    user-select: none;
+}
+
+:root {
+    --in_progress_item: black;   
+    --in_progress_background: #DFE1E5;   
+    --calm_item: #6D6F78;   
+    --calm_background: #F2F3F5;   
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+h4 {
+    color: var(--calm_item);
+}
+
+.content {
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 30px;
+}
+
+.columns_wrapper {
+    border-radius: 15px;
+    background: var(--calm_background);
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 30px;
+}
+
+.columns {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.column_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    height: 100%;
+    gap: 30px;
+    width: max-content;
+    max-width: 30px;
+    color: var(--calm_item);
+}
+
+.column {
+    min-width: 30px;
+    background: var(--calm_item);
+}
+
+.column_value {
+    font-size: 30px;
+    color: var(--in_progress_item);
+    height: 7%; 
+}
+
+.control_panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.select_sort_type {
+    font-size: 20px;
+}
+
+.start_btn {
+    font-size: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    color: var(--calm_item);
+    background: var(--calm_background);
+    cursor: pointer;    
+}
+
+.start_btn:hover {
+    color: var(--in_progress_item);
+    background: var(--in_progress_background);
+}
+
+.start_btn:disabled {
+    cursor: default;
+    color: var(--in_progress_item);
+    background: var(--in_progress_background);
+}
